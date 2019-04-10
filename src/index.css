@@ -1,0 +1,363 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  background: #0e0e0e;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Global */
+
+.red {
+  color: #e30717;
+}
+
+/* Navbar */
+.nav-logo {
+  width: 35%;
+}
+
+.anchor-tag {
+  position: absolute;
+  left: 0;
+  top: -100px;
+  scroll-behavior: smooth;
+}
+
+.anchor {
+  position: relative;
+}
+
+.navbar-top {
+  padding: 2%;
+  height: 13vh;
+}
+
+.navbar-brand {
+  max-width: 20%;
+  margin-right: 8%;
+  margin-left: 5%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.navbar-top.scrolled {
+  background-color: #000;
+  transition: background-color 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+  font-size: 24px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.scrolled-link {
+  color: #909294;
+}
+
+.navbar-brand.scrolled-link {
+  color: #000;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.scrolled-link:hover {
+  color: #fff;
+}
+
+.selected {
+  color: #000;
+}
+
+.hide {
+  display: none;
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.fa-bars {
+  font-size: 2em;
+}
+
+.white-burger {
+  color: #fff;
+}
+
+.black-burger {
+  color: #000;
+}
+
+.mobile-nav {
+    background-color: #fff;
+    height: auto;
+}
+
+.btn {
+  font-size: 1em;
+  margin-right: 10px;
+  width: 15%;
+}
+
+.btn-donate {
+  background-color: transparent;
+  border: solid 1px #00dcff;
+  color: #00dcff;
+
+}
+
+.btn-donate-light {
+  background-color: transparent;
+  border: solid 1px #00dcff;
+  color: #00dcff;
+}
+
+.btn-donate:hover {
+  background-color: #00dcff;
+  color: #000;
+}
+
+.btn-donate-light:hover {
+  background-color: #00dcff;
+  color: #000;
+}
+
+.btn-gig {
+  background-color: transparent;
+  border: 1px solid #1eed4d;
+  color: #1eed4d;
+}
+
+.btn-gig:hover {
+  background-color: #1eed4d;
+  color: #000;
+}
+
+/* Header */
+
+header  {
+  height: 100vh;
+  min-height: 400px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-x: left;
+  background-image:
+    url('./images/ewan-header.jpeg');
+  background-color: #010101;
+}
+
+.header-text {
+  width: 50%;
+  text-align: right;
+  margin-left: 50%;
+  padding-top: 25%;
+  color: #fff;
+
+}
+
+.header-text h1 {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.music {
+  padding: 25px;
+}
+
+/* General */
+.line {
+  position: relative;
+  overflow: visible;
+  height: 1px;
+  border-collapse: collapse;
+  border: 0.5px solid;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* What We Do */
+
+.what-we-do {
+  letter-spacing: 2px;
+  line-height: 2;
+  height: 87vh;
+  padding: 25px;
+  color: #333;
+  background: #fff;
+  /* background-image: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
+    ),
+    url('./images/what-we-do.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.band-img {
+  max-width: 100%;
+}
+
+.what-we-do-text {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.what-we-do-text p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Mission */
+
+.mission {
+  letter-spacing: 2px;
+  line-height: 2;
+  padding: 25px;
+  height: 87vh;
+  color: #fff;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+      ),
+    url('./images/mission.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.band-img {
+  max-width: 100%;
+}
+
+.mission-text {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.mission-text p {
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+/* Modals */
+
+#gigModal .modal-dialog {
+  max-width: 75%;
+}
+
+#gigModal .modal-header {
+
+  color: #fff;
+  height: 60vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+      ),
+    url('./images/gigModal.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#gigModal .modal-header h5 {
+  font-size: 60px;
+  align-self: center;
+  margin: auto;
+}
+
+#gigModal form {
+  text-align: left;
+}
+
+/* Community */
+
+.community {
+  padding-top: 150px;
+}
+
+.community h1 {
+  color: #fff;
+}
+
+.post-section {
+  text-align: left;
+  color: #fff;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
+.upcoming-events {
+
+}
+
+.posts {
+  border-right: 2px solid #fff;
+  overflow: scroll;
+  height: 70vh;
+}
+
+.post {
+  padding: 25px 10px;
+}
+
+.post .music {
+  padding: 0;
+}
+
+.event {
+  padding: 25px 0;
+}
+
+.event-sign-up {
+  background-color: transparent;
+  border: solid 1px #00dcff;
+  color: #00dcff;
+  width: auto;
+}
+
+.event-sign-up:hover {
+  background: #00dcff;
+  color: #000;
+}
+
+/* Footer */
+
+
+.footer {
+  text-align: left;
+  height: 300px;
+  padding-top: 100px;
+  color: #bcbcbc;
+}
+
+.navbar-bottom {
+  border-top: 1px solid;
+  margin-top: 20px;
+}
+
+.navbar-bottom .navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-bottom .nav-link {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #bcbcbc;
+}
