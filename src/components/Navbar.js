@@ -32,7 +32,7 @@ class Navbar extends Component {
 
     let isLight = false
 
-    if(window.location.href === 'http://localhost:3000/community') {
+    if(window.location.href === 'http://localhost:3000/community' || window.location.href === 'https://ewans-trust.netlify.com/community') {
       isLight = true
     }
 
