@@ -73,6 +73,14 @@ class Navbar extends Component {
                 <button type="button" className="btn btn-gig btn-lg header-button nav-btn" data-toggle="modal" data-target="#gigModal">Give a Gig</button>
               </span>
             }
+            {this.props.isTop && isLight ?
+              <span>
+                <a href="https://cafdonate.cafonline.org/9919">
+                  <button type="button" className="btn btn-donate btn-lg header-button nav-btn">Donate</button>
+                </a>
+                <button type="button" className="btn btn-gig btn-lg header-button nav-btn" data-toggle="modal" data-target="#gigModal">Give a Gig</button>
+              </span> : null
+            }
           </div>
       </nav>
     )
