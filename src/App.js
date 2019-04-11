@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isTop: true
+      isTop: true,
     }
   };
 
@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Navbar isTop={this.state.isTop}/>
+          <Navbar isTop={this.state.isTop} />
           <Route exact path="/" render={(props) => <Home isTop={this.state.isTop}/>} />
           <Route path="/community" component={Community} />
           <GigModal />

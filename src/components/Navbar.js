@@ -3,6 +3,14 @@ import { Link, NavLink } from 'react-router-dom';
 import {  NavHashLink } from 'react-router-hash-link';
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isLight: false,
+      mobileOpen: false
+    }
+  }
+
   scrollWithOffset = (el, offset) => {
     const elementPosition = el.offsetTop - offset;
     window.scroll({
@@ -11,14 +19,34 @@ class Navbar extends Component {
       behavior: "smooth"
     })
   }
+
+  handleClick = () => {
+    this.setState({
+      mobileOpen: !this.state.mobileOpen
+    })
+  }
+
   render() {
 
+    console.log(this.state)
+
+    let isLight = false
+
+    if(window.location.href === 'http://localhost:3000/community') {
+      isLight = true
+    }
+
+    let darkNav = this.props.isTop ? 'navbar fixed-top navbar-top navbar-expand-lg navbar-dark' : 'navbar fixed-top navbar-expand-lg navbar-dark navbar-top scrolled'
+    let lightNav = isLight ? ' navbar-light' : ''
+    let mobileNav = this.state.mobileOpen ? ' mobile-open' : ''
+    let navClass = darkNav + lightNav + mobileNav
+
     return (
-      <nav className={this.props.isTop ? 'navbar fixed-top navbar-top navbar-expand-lg navbar-dark' : 'navbar fixed-top navbar-expand-lg navbar-dark navbar-top scrolled'}>
+      <nav className={navClass}>
           <Link className="navbar-brand" to="/">
             <img src={require("../images/logo-red&white-filled2.svg")} alt="Ewan's Trust" className="ewans-trust-logo img-fluid nav-logo"/>
           </Link>
-          <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar top" aria-expanded="false" aria-label="Toggle navigation">
+          <button onClick={this.handleClick} className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar top" aria-expanded="false" aria-label="Toggle navigation">
             <i className="white-burger fa fa-bars"></i>
           </button>
           <div className="navbar-collapse collapse" id="navbar-top">
@@ -37,10 +65,14 @@ class Navbar extends Component {
               </li>
             </ul>
             {this.props.isTop ?
-              <button type="button" className="btn btn-donate btn-lg header-button nav-btn" data-toggle="modal" data-target="#contactModal">Donate</button> :
-              <button type="button" className="btn btn-donate-light btn-lg header-button nav-btn" data-toggle="modal" data-target="#contactModal">Donate</button>
+              null :
+              <span>
+                <a href="https://cafdonate.cafonline.org/9919">
+                  <button type="button" className="btn btn-donate btn-lg header-button nav-btn">Donate</button>
+                </a>
+                <button type="button" className="btn btn-gig btn-lg header-button nav-btn" data-toggle="modal" data-target="#gigModal">Give a Gig</button>
+              </span>
             }
-            <button type="button" className="btn btn-gig btn-lg header-button nav-btn" data-toggle="modal" data-target="#gigModal">Give a Gig</button>
           </div>
       </nav>
     )

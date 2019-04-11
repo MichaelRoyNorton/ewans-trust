@@ -8,7 +8,17 @@ class Header extends Component {
         <div className="container">
           <div className="row header-text">
             <div className="col">
-              <h1>Ewan's Music Trust has been set up to help fund underprivileged children's musical ambitions, just as Ewan had been so passionate about when teaching <span className="red">music.</span></h1>
+              <h1>Ewan's Music Foundation helps fund underprivileged children's musical <span className="red">ambitions.</span></h1>
+              {this.props.isTop ?
+                <div className="col header-buttons">
+                  <a href="https://cafdonate.cafonline.org/9919">
+                    <button type="button" className="btn btn-donate btn-lg header-button nav-btn">Donate</button>
+                  </a>
+                  <button type="button" className="btn btn-gig btn-lg header-button nav-btn" data-toggle="modal" data-target="#gigModal">Give a Gig</button>
+                </div>
+                :
+                null
+              }
               <img className="music" src={require('../images/note-1.svg')} alt="music" />
               <img className="music" src={require('../images/note-5.svg')} alt="music"/>
               <img className="music" src={require('../images/note-2.svg')} alt="music"/>

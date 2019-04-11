@@ -21,7 +21,17 @@ code {
   color: #e30717;
 }
 
+.light-bg {
+  background: #fff;
+}
+
 /* Navbar */
+
+.navbar-light {
+  background: #000;
+
+}
+
 .nav-logo {
   width: 35%;
 }
@@ -39,7 +49,7 @@ code {
 
 .navbar-top {
   padding: 2%;
-  height: 13vh;
+  height: 100px;
 }
 
 .navbar-brand {
@@ -62,8 +72,17 @@ code {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.mobile-open {
+  background-color: #000;
+}
+
 .nav-link {
-  font-size: 24px;
+  font-size: 18px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link.scrolled-link {
@@ -110,7 +129,6 @@ code {
 .btn {
   font-size: 1em;
   margin-right: 10px;
-  width: 15%;
 }
 
 .btn-donate {
@@ -165,7 +183,7 @@ header  {
   width: 50%;
   text-align: right;
   margin-left: 50%;
-  padding-top: 25%;
+  padding-top: 40vh;
   color: #fff;
 
 }
@@ -173,6 +191,11 @@ header  {
 .header-text h1 {
   font-weight: 300;
   line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+.header-buttons button {
+  width: 45%;
 }
 
 .music {
@@ -197,7 +220,7 @@ header  {
 .what-we-do {
   letter-spacing: 2px;
   line-height: 2;
-  height: 87vh;
+  min-height: 87vh;
   padding: 25px;
   color: #333;
   background: #fff;
@@ -230,7 +253,7 @@ header  {
   letter-spacing: 2px;
   line-height: 2;
   padding: 25px;
-  height: 87vh;
+  min-height: 87vh;
   color: #fff;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.65),
@@ -251,7 +274,6 @@ header  {
 }
 
 .mission-text p {
-
   font-size: 20px;
   font-weight: 500;
 }
@@ -293,18 +315,18 @@ header  {
 }
 
 .community h1 {
-  color: #fff;
+  color: #000;
+}
+
+.login-register {
+  text-align: right;
 }
 
 .post-section {
   text-align: left;
-  color: #fff;
+  color: #000;
   line-height: 2;
   letter-spacing: 2px;
-}
-
-.upcoming-events {
-
 }
 
 .posts {
@@ -323,18 +345,6 @@ header  {
 
 .event {
   padding: 25px 0;
-}
-
-.event-sign-up {
-  background-color: transparent;
-  border: solid 1px #00dcff;
-  color: #00dcff;
-  width: auto;
-}
-
-.event-sign-up:hover {
-  background: #00dcff;
-  color: #000;
 }
 
 /* Footer */
@@ -360,4 +370,86 @@ header  {
   padding: 10px 20px;
   font-size: 18px;
   color: #bcbcbc;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+  .header-text {
+    margin-left: 30%;
+    width: 70%;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1115px) {
+  .navbar-brand {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-collapse {
+    background: #000;
+    padding-bottom: 15px;
+  }
+
+  .navbar-top {
+    padding: 0
+  }
+  .header-text {
+    margin-left: 15%;
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  header {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+        ),
+      url('./images/ewan-header.jpeg');
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .header-text {
+    margin-left: 0;
+    width: 100%;
+  }
+  .header-text h1 {
+    font-size: 2rem;
+  }
+  .music {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .navbar-bottom .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-logo {
+    width: 60%;
+  }
+}
+
+
+
+@media only screen and (max-height: 740px) {
+  .what-we-do-text p {
+    font-size: 18px;
+  }
+
+  .mission-text p {
+    font-size: 18px;
+  }
 }

@@ -6,6 +6,7 @@ class Community extends Component {
     this.state = {
       posts: [],
       users: [],
+      photos: [],
       events: [
         {
           title: 'Korev',
@@ -21,7 +22,8 @@ class Community extends Component {
           image: '../images/gigModal.jpg',
           info: 'Come along to see Korev play at the Winchester on 12th May',
         }
-      ]
+      ],
+      loaded: false
     }
   }
 
@@ -34,48 +36,59 @@ class Community extends Component {
       .then(response => response.json())
       .then(json => this.setState({users: json}))
 
+    await fetch('https://jsonplaceholder.typicode.com/photos')
+      .then(response => response.json())
+      .then(json => this.setState({photos: json.map((photo) => photo.url)}))
+
     this.setState({
       loaded: true
     })
   }
 
   render() {
-    console.log(this.state)
     return (
-      <div className="container community">
-        <div className="row post-section">
-          <h1>Updates from the <span className="red">Community</span></h1>
-          <div className="col-8 posts">
-            <br />
-            {this.state.posts.map((item, key) =>
-              <div className="row post" key={key}>
-                <div className="col-1">
-                  <img className="music" src={require(`../images/note-${Math.floor((Math.random() * 3) + 1) }.svg`)} alt="music" />
-                </div>
-                <div className="col-11">
-                  <h4>{item.title}</h4>
-                  <h6>{this.state.users.map((user) =>
-                    user.id === item.userId ? user.name : null
-                  )}</h6>
-                  <p>{item.body}</p>
-                </div>
+      <div className="light-bg">
+        <div className="container community">
+          {this.state.loaded ?
+            <div className="row post-section">
+              <div className="col-md-8">
+                <h1>Updates from the <span className="red">Community</span></h1>
               </div>
-            )}
-          </div>
-          <div className="col-4 upcoming-events">
-            <h2>Upcoming fundraising events</h2>
-            {this.state.events.map((event, key) =>
-              <div className="event" key={key}>
-                <h4>{event.date}</h4>
-                <h5>{event.title}</h5>
-                <p>{event.info}</p>
-                <button className="btn event-sign-up">Sign Up</button>
+              <div className="col-md-4 login-register">
+                <button className="btn login">Log in</button>
+                <button className="btn register">Register</button>
               </div>
-            )}
-          </div>
+              <div className="col-lg-8 col-md-10 col-sm-12 posts">
+                <br />
+                {this.state.posts.map((item, key) =>
+                  <div className="row post" key={key}>
+                    <div className="col-1">
+                      <img className="music" src={require(`../images/note-${Math.floor((Math.random() * 3) + 1) }.svg`)} alt="music" />
+                    </div>
+                    <div className="col-11">
+                      <h4>{item.title}</h4>
+                      <h6>{this.state.users.map((user) =>
+                        user.id === item.userId ? user.name : null
+                      )}</h6>
+                      <p>{item.body}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="col-4 upcoming-events">
+                <h2>Upcoming fundraising events</h2>
+                {this.state.events.map((event, key) =>
+                  <div className="event" key={key}>
+                    <h4>{event.date}</h4>
+                    <h5>{event.title}</h5>
+                    <p>{event.info}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+             : null}
         </div>
       </div>
-
     )
   }
 }
