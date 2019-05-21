@@ -52,16 +52,16 @@ class Navbar extends Component {
           <div className="navbar-collapse collapse" id="navbar-top">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <NavHashLink scroll={el => this.scrollWithOffset(el, 100)} activeClassName="selected" smooth to="/#what-we-do" className={this.props.isTop ? "nav-link" : "nav-link scrolled-link"}>What We Do</NavHashLink>
-              </li>
-              <li className="nav-item">
                 <NavHashLink scroll={el => this.scrollWithOffset(el, 100)} activeClassName="selected" smooth to="/#our-mission" className={this.props.isTop ? "nav-link" : "nav-link scrolled-link"}>Our Mission</NavHashLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/community" className={this.props.isTop ? "nav-link" : "nav-link scrolled-link"}>Community</NavLink>
+                <NavHashLink scroll={el => this.scrollWithOffset(el, 100)} activeClassName="selected" smooth to="/#awards" className={this.props.isTop ? "nav-link" : "nav-link scrolled-link"}>Awards</NavHashLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/events" className={this.props.isTop ? "nav-link" : "nav-link scrolled-link"}>Events</NavLink>
+                <NavHashLink scroll={el => this.scrollWithOffset(el, 100)} activeClassName="selected" smooth to="/#events"  className={this.props.isTop ? "nav-link" : "nav-link scrolled-link"}>Events</NavHashLink>
+              </li>
+              <li className="nav-item">
+                <button className={this.props.isTop ? "nav-link nav-button" : "nav-link scrolled-link nav-button"} data-toggle="modal" data-target="#contactModal">Contact</button>
               </li>
             </ul>
             {this.props.isTop ?

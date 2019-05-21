@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import About from './About';
-import Mission from './Mission';
+import Awards from './Awards';
+import Events from './Events';
 
 class Home extends Component {
 
@@ -12,7 +13,8 @@ class Home extends Component {
         <About />
         <div className="line">
         </div>
-        <Mission />
+        <Awards />
+        <Events />
       </div>
     )
   }

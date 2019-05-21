@@ -5,6 +5,9 @@ import Community from './components/Community';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import GigModal from './components/GigModal';
+import WorkshopModal from './components/WorkshopModal';
+import BursaryModal from './components/BursaryModal';
+import ContactModal from './components/ContactModal';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 
@@ -33,6 +36,9 @@ class App extends Component {
           <Route exact path="/" render={(props) => <Home isTop={this.state.isTop}/>} />
           <Route path="/community" component={Community} />
           <GigModal />
+          <WorkshopModal />
+          <BursaryModal />
+          <ContactModal />
           <Footer />
         </div>
       </Router>

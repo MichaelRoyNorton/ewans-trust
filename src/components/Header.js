@@ -8,7 +8,7 @@ class Header extends Component {
         <div className="container">
           <div className="row header-text">
             <div className="col">
-              <h1>Ewan's Music Foundation helps fund underprivileged children's musical <span className="red">ambitions.</span></h1>
+              <h1>Ewan Lane Music Foundation helps fund underprivileged children's musical <span className="red">ambitions.</span></h1>
               {this.props.isTop ?
                 <div className="col header-buttons">
                   <a href="https://cafdonate.cafonline.org/9919">

@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
 class About extends Component {
+
+
   render() {
     return (
-      <div id="what-we-do" className="what-we-do">
+      <div id="our-mission" className="what-we-do">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-10 col-sm-12 what-we-do-text">
-              <h2>What We <span className="red">Do</span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies vulputate sapien vel vehicula. Cras imperdiet metus ac lectus eleifend vehicula. Maecenas suscipit nibh ut scelerisque facilisis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis sit amet nulla non lectus ornare suscipit.</p>
-              <p>Etiam velit justo, pretium suscipit quam ac, molestie ornare nulla. Cras eu laoreet leo. Quisque ultricies mi at sem finibus, vestibulum commodo urna dictum. Praesent sed dignissim magna, a tincidunt urna. Nunc facilisis quis ipsum quis consectetur. Etiam vel nisl id dui bibendum tempus a aliquet ipsum. Sed sed cursus orci. Cras erat lectus, tincidunt quis fermentum quis, dapibus vitae leo.</p>
+              <h2>Our <span className="red">Mission</span></h2>
+              <p>We help transform the lives of children and young people living in the most challenging of circumstances in Canvey Island and South East Essex through the provision of space, instruments, instruction and performance opportunities that are not otherwise available.</p>
+              <p>Our mission is to support children who don’t get to make music because of who they are, where they live or what they are going through.</p>
             </div>
           </div>
         </div>
