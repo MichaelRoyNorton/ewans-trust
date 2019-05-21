@@ -7,7 +7,7 @@ class ContactModal extends Component {
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header justify-content-center">
-              <img id="contactModalLabel" src={require('../images/logo-red&black-filled20.svg')} className="contact-logo img-fluid" alt="Ewan Lane Music Foundation"/>
+              <img id="contactModalLabel" src={require('../images/ewans-trust-logo-black.svg')} className="contact-logo img-fluid" alt="Ewan Lane Music Foundation"/>
               <button type="button" className="btn btn-secondary close-modal-dark" data-dismiss="modal">X</button>
             </div>
             <div className="modal-body">

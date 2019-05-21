@@ -15,7 +15,7 @@ class About extends Component {
             </div>
           </div>
         </div>
-        <img className="logo" src={require('../images/logo-red&black-filled20.svg')} />
+        <img className="logo" src={require('../images/ewans-trust-logo-black.svg')} />
       </div>
     )
   }

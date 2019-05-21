@@ -44,7 +44,7 @@ class Navbar extends Component {
     return (
       <nav className={navClass}>
           <Link className="navbar-brand" to="/">
-            <img src={require("../images/logo-red&white-filled2.svg")} alt="Ewan's Trust" className="ewans-trust-logo img-fluid nav-logo"/>
+            <img src={require("../images/ewans-trust-logo-white.svg")} alt="Ewan's Trust" className="ewans-trust-logo img-fluid nav-logo"/>
           </Link>
           <button onClick={this.handleClick} className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar top" aria-expanded="false" aria-label="Toggle navigation">
             <i className="white-burger fa fa-bars"></i>

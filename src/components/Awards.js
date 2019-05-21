@@ -55,7 +55,7 @@ class Awards extends Component {
             </div>
           </div>
         </div>
-        <img className="logo" src={require('../images/logo-red&white-filled2.svg')} />
+        <img className="logo" src={require('../images/ewans-trust-logo-white.svg')} />
       </div>
     )
   }
