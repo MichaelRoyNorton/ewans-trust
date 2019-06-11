@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class GigModal extends Component {
   render() {
     return (
-      <div className="modal fade" id="gigModal" tabindex="-1" role="dialog" aria-labelledby="gigModalLabel" aria-hidden="true">
+      <div className="modal fade" id="gigModal" tabIndex="-1" role="dialog" aria-labelledby="gigModalLabel" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">

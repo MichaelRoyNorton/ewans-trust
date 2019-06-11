@@ -46,10 +46,10 @@ class Awards extends Component {
               <h2 className="subheading">Ewan Lane Music Foundation <span className="red">Awards</span></h2>
               <div className="row">
                 <div className="col-md-6">
-                  <button type="button" onMouseOver={this.handleMouseOverWorkshop} onMouseOut={this.handleMouseOutWorkshop} className="btn btn-workshop btn-lg" data-toggle="modal" data-target="#workshopModal"><h3>Annual Workshops</h3><h3><i class={this.state.hoverWorkshops ? "fas fa-guitar wobble-ver-left red" : "fas fa-guitar"}></i></h3><p>Find out more</p></button>
+                  <button type="button" onMouseOver={this.handleMouseOverWorkshop} onMouseOut={this.handleMouseOutWorkshop} className="btn btn-workshop btn-lg" data-toggle="modal" data-target="#workshopModal"><h3>Annual Workshops</h3><h3><i className={this.state.hoverWorkshops ? "fas fa-guitar wobble-ver-left red" : "fas fa-guitar"}></i></h3><p>Find out more</p></button>
                 </div>
                 <div className="col-md-6">
-                  <button type="button" onMouseOver={this.handleMouseOverBursary} onMouseOut={this.handleMouseOutBursary} className="btn btn-bursary btn-lg" data-toggle="modal" data-target="#bursaryModal"><h3>Bursary Awards</h3><h3><i class={this.state.hoverBursary ? "fas fa-drum vibrate-3 red" : "fas fa-drum" }></i></h3><p>Find out more</p></button>
+                  <button type="button" onMouseOver={this.handleMouseOverBursary} onMouseOut={this.handleMouseOutBursary} className="btn btn-bursary btn-lg" data-toggle="modal" data-target="#bursaryModal"><h3>Bursary Awards</h3><h3><i className={this.state.hoverBursary ? "fas fa-drum vibrate-3 red" : "fas fa-drum" }></i></h3><p>Find out more</p></button>
                 </div>
               </div>
             </div>

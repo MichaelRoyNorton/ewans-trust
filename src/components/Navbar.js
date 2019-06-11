@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {  NavHashLink } from 'react-router-hash-link';
 
 class Navbar extends Component {
@@ -27,8 +27,6 @@ class Navbar extends Component {
   }
 
   render() {
-
-    console.log(this.state)
 
     let isLight = false
 

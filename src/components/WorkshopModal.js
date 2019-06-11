@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class WorkshopModal extends Component {
   render() {
     return (
-      <div className="modal fade" id="workshopModal" tabindex="-1" role="dialog" aria-labelledby="workshopModalLabel" aria-hidden="true">
+      <div className="modal fade" id="workshopModal" tabIndex="-1" role="dialog" aria-labelledby="workshopModalLabel" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">

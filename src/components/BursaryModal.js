@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class BursaryModal extends Component {
   render() {
     return (
-      <div className="modal fade" id="bursaryModal" tabindex="-1" role="dialog" aria-labelledby="bursaryModalLabel" aria-hidden="true">
+      <div className="modal fade" id="bursaryModal" tabIndex="-1" role="dialog" aria-labelledby="bursaryModalLabel" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">

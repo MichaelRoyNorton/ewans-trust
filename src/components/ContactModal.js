@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class ContactModal extends Component {
   render() {
     return (
-      <div className="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div className="modal fade" id="contactModal" tabIndex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header justify-content-center">
